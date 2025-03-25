@@ -12,3 +12,4 @@ plugins {
 
 rootProject.name = "kotlin"
 include("app")
+//implementation(project(":functional-server-library"))

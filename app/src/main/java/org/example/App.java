@@ -3,12 +3,28 @@
  */
 package org.example;
 
+//import java.io.*;
+import org.example.TextInput;
+import java.io.IOException;
+import org.example.Test;
+
 public class App {
+    static TextInput ti;
     public String getGreeting() {
         return "Hello World!";
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args)throws IOException {
         System.out.println(new App().getGreeting());
+        for(String a:args)System.out.println(a);
+
+        new Test().run();
+
+        while(true){
+            String i=ti.strLine();
+            if(i==null)i="NILL";
+            if(i=="@EXIT")break;
+            System.out.println("User said: "+i);
+        };
     }
 }
