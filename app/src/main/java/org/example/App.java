@@ -7,6 +7,7 @@ package org.example;
 import org.example.TextInput;
 import java.io.IOException;
 import org.example.Test;
+import org.example.Dialog;
 
 public class App {
     static TextInput ti;
@@ -19,12 +20,13 @@ public class App {
         for(String a:args)System.out.println(a);
 
         new Test().run();
+        new Dialog().annoying();
 
-        while(true){
+        /*while(true){
             String i=ti.strLine();
             if(i==null)i="NILL";
             if(i=="@EXIT")break;
             System.out.println("User said: "+i);
-        };
+        };*/
     }
 }
